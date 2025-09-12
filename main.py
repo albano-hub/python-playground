@@ -52,15 +52,17 @@ twprint(str1)
 sleep(0.5)
 if age >= 18:
     twprint("You are old enough to play.\n")
-    sleep(2)
-    print()
-    twprint("\tDo you want to play? (yes/no) \n -")
+    print("\n", end='\t')
+    sleep(1)
+    twprint("Do you want to play? (yes/no) \n -")
     want_to_play = input().lower()
     if want_to_play == "yes":
         sleep(1.5)
         twprint("\nGreat. Let's play!\n\n")
-
-        twprint("Your journey begins. You are in a dark room. There is a door to your left and right. Which one do you take? (left/right) \n")
+        sleep(2)
+        print("\033[H\033[J")
+        sleep(1.25)
+        twprint("Your journey begins. You are in a dark room. There is a door to your left and right. Which one do you take? (left/right) \n -I go")
         L_R = input().lower()
         if L_R == "left":
             sleep(1)
